@@ -4,7 +4,7 @@
 #      作者：赵泽荣
 #      时间：2021年9月9日（农历八月初三）
 #      个人站点：1.https://zhao302014.github.io/
-#              2.https://blog.csdn.net/IT_charge/
+#               2.https://blog.csdn.net/IT_charge/
 #      个人GitHub地址：https://github.com/zhao302014
 # ------------------------------------------------- #
 import torch
