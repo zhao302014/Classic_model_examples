@@ -16,6 +16,7 @@ from torch import nn
 #   · 所有池化方法为平均池化
 #   · 所有激活函数采用 Sigmoid
 #   · 该模型共 7 层（3 个卷积层，2 个池化层，2 个全连接层）
+#   · LeNet5 网络结构被称为第 1 个典型的 CNN
 # ------------------------------------------------- #
 class MyLeNet5(nn.Module):
     def __init__(self):
