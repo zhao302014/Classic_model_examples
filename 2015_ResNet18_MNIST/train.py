@@ -2,14 +2,14 @@
 # -*- coding:utf-8 -*-
 # ------------------------------------------------- #
 #      作者：赵泽荣
-#      时间：2021年9月9日（农历八月初三）
+#      时间：2021年9月10日（农历八月初四）
 #      个人站点：1.https://zhao302014.github.io/
 #              2.https://blog.csdn.net/IT_charge/
 #      个人GitHub地址：https://github.com/zhao302014
 # ------------------------------------------------- #
 import torch
 from torch import nn
-from net import MyVgg16Net
+from net import MyResNet18
 import numpy as np
 from torch.optim import lr_scheduler
 from torchvision import datasets, transforms
@@ -32,7 +32,7 @@ test_dataloader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=
 device = "cuda" if torch.cuda.is_available() else 'cpu'
 
 # 调用 net 里定义的模型，如果 GPU 可用则将模型转到 GPU
-model = MyVgg16Net().to(device)
+model = MyResNet18().to(device)
 
 # 定义损失函数（交叉熵损失）
 loss_fn = nn.CrossEntropyLoss()
