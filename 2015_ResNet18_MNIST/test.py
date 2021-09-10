@@ -8,7 +8,7 @@
 #      个人GitHub地址：https://github.com/zhao302014
 # ------------------------------------------------- #
 import torch
-from net import MyVgg16Net
+from net import MyResNet18
 import numpy as np
 from torch.autograd import Variable
 from torchvision import datasets, transforms
@@ -32,7 +32,7 @@ test_dataloader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=
 device = "cuda" if torch.cuda.is_available() else 'cpu'
 
 # 调用 net 里定义的模型，如果 GPU 可用则将模型转到 GPU
-model = MyVgg16Net().to(device)
+model = MyResNet18().to(device)
 # 加载 train.py 里训练好的模型
 model.load_state_dict(torch.load("./save_model/99model.pth"))
 
