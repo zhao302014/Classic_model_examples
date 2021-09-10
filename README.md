@@ -15,9 +15,13 @@
 
 <div align="center"><img src="https://www.researchgate.net/profile/Timea-Bezdan/publication/333242381/figure/fig2/AS:760979981860866@1558443174380/VGGNet-architecture-19.ppm" /></div> 
 
- - <b>2014 年——GoogLeNet</b>：这是 google 推出的基于 Inception 模块的深度神经网络模型，在 2014 年的 ImageNet 竞赛中夺得了冠军，在随后的两年中一直在改进，形成了 Inception V2、Inception V3、Inception V4 等版本。；该项目自己搭建了 GoogLeNet 网络并在 MNIST 手写数字识别项目中得到了应用。（注：net.py 代码着实很长，原因是冗余的太多了，正像我的朋友吃午饭时讲的那样：“这个代码重复部分很多，完全可以写到一个函数里调用啊，这样写太没有灵魂了。”怎么说呢，主要当时快写完了，后来想想也是；也不能说这样写清晰地展现了 GoogLeNet 的架构，反而会让人觉得这是一个憨批程序员，一根筋，不懂得变通，所以这个自我复现的 GoogLeNet 版本的 net.py 文件代码就这样留着吧，也算是一个提醒，以后写代码在实现功能的基础上争取精简一些...）
+ - <b>2014 年——GoogLeNet</b>：这是 google 推出的基于 Inception 模块的深度神经网络模型，在 2014 年的 ImageNet 竞赛中夺得了冠军，在随后的两年中一直在改进，形成了 Inception V2、Inception V3、Inception V4 等版本。该项目自己搭建了 GoogLeNet 网络并在 MNIST 手写数字识别项目中得到了应用。（注：net.py 代码着实很长，原因是冗余的太多了，正像我的朋友吃午饭时讲的那样：“这个代码重复部分很多，完全可以写到一个函数里调用啊，这样写太没有灵魂了。”怎么说呢，主要当时快写完了，后来想想也是；也不能说这样写清晰地展现了 GoogLeNet 的架构，反而会让人觉得这是一个憨批程序员，一根筋，不懂得变通，所以这个自我复现的 GoogLeNet 版本的 net.py 文件代码就这样留着吧，也算是一个提醒，以后写代码在实现功能的基础上争取精简一些...）
 
 <div align="center"><img src="https://miro.medium.com/max/5176/1*ZFPOSAted10TPd3hBQU8iQ.png" /></div> 
+
+ - <b>2015 年——ResNet</b>：这是由微软研究院的 Kaiming He 等四名华人提出，通过使用 ResNet Unit 成功训练出了 152 层的神经网络，并在 ILSVRC2015 比赛中取得冠军，在 top5 上的错误率为 3.57%，同时参数量比 VGGNet 低，效果非常突出。ResNet 的结构可以极快的加速神经网络的训练，模型的准确率也有比较大的提升。同时 ResNet 的推广性非常好，甚至可以直接用到 InceptionNet 网络中。该项目自己搭建了 ResNet18 网络并在 MNIST 手写数字识别项目中得到了应用。
+
+<div align="center"><img src="https://upload-images.jianshu.io/upload_images/15074510-faee46ef496b76bf.jpg" /></div> 
 
  - <b>2019 年——MobileNet-v3</b>：这是 Google 在 2019 年 3 月 21 日提出的网络架构，也是继 MobileNet-v2 之后的又一力作，MobileNet-v3 small 在 ImageNet 分类任务上，较 MobileNet-v2，精度提高了大约 3.2%，时间却减少了 15%，MobileNet-v3 large 在 imagenet 分类任务上，较 MobileNet-v2，精度提高了大约 4.6%，时间减少了 5%，MobileNet-v3 large 与 v2 相比，在 COCO 上达到相同的精度，速度快了 25%，同时在分割算法上也有一定的提高。论文还有一个亮点在于，网络的设计利用了 NAS（network architecture search）算法以及 NetAdapt algorithm 算法。并且，论文还介绍了一些提升网络效果的 trick，这些 trick 也提升了不少的精度以及速度。
 
