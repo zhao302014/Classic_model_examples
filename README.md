@@ -19,4 +19,8 @@
 
 <div align="center"><img src="https://miro.medium.com/max/5176/1*ZFPOSAted10TPd3hBQU8iQ.png" /></div> 
 
+ - <b>2019 年——MobileNet-v3</b>：这是 Google 在 2019 年 3 月 21 日提出的网络架构，也是继 MobileNet-v2 之后的又一力作，MobileNet-v3 small 在 ImageNet 分类任务上，较 MobileNet-v2，精度提高了大约 3.2%，时间却减少了 15%，MobileNet-v3 large 在 imagenet 分类任务上，较 MobileNet-v2，精度提高了大约 4.6%，时间减少了 5%，MobileNet-v3 large 与 v2 相比，在 COCO 上达到相同的精度，速度快了 25%，同时在分割算法上也有一定的提高。论文还有一个亮点在于，网络的设计利用了 NAS（network architecture search）算法以及 NetAdapt algorithm 算法。并且，论文还介绍了一些提升网络效果的 trick，这些 trick 也提升了不少的精度以及速度。
+
+<div align="center"><img src="https://1.bp.blogspot.com/-qMBHklyOfic/XcxKvHgiB8I/AAAAAAAAE8A/osT1RxwyqPY7bE_x7vsyYTYiIt7QSn0hQCEwYBhgL/s640/image1.png" /></div> 
+
 </br>
