@@ -23,6 +23,11 @@
 
 <div align="center"><img src="https://upload-images.jianshu.io/upload_images/15074510-faee46ef496b76bf.jpg" /></div> 
 
+ - <b>2015 年——U-Net</b>：2014 年，加州大学伯克利分校的 Long 等人提出全卷积网络（FCN），这使得卷积神经网络无需全连接层即可进行密集的像素预测，CNN 从而得到普及。a. U-net 建立在 FCN 的网络架构上，作者修改并扩大了这个网络框架，使其能够使用很少的训练图像就得到很 精确的分割结果。b. 添加上采样阶段，并且添加了很多的特征通道，允许更多的原图像纹理的信息在高分辨率的 layers 中进行传播。c. U-net 没有 FC 层，且全程使用 valid 来进行卷积，这样的话可以保证分割的结果都是基于没有缺失的上下文特征得到的，因此输入输出的图像尺寸不太一样( 但是在 keras 上代码做的都是 same convolution)，对于图像很大的输入，可以使用 overlap-strategy 来进行无缝的图像输出。d. 为了预测输入图像的边缘部分，通过镜像输入图像来外推丢失的上下文，实则输入大图像也是可以的，但是这个策略基于 GPU 内存不够的情况下所提出的。e. 细胞分割的另外一个难点在于将相同类别且互相接触的细胞分开，因此作者提出了 weighted loss，也就是赋予相互接触的两个细胞之间的 background 标签更高的权重。网络分为四个主要部分：preprocessing、down convolution、up convolution、Output Map preprocessing 该项目自己搭建了 U-Net 网络并在 Semantic Segmentation 项目中得到了应用。
+
+<div align="center"><img src="https://shunqiang.ml/img/unet.png" /></div> 
+
+
  - <b>2019 年——MobileNet-v3</b>：这是 Google 在 2019 年 3 月 21 日提出的网络架构，也是继 MobileNet-v2 之后的又一力作，MobileNet-v3 small 在 ImageNet 分类任务上，较 MobileNet-v2，精度提高了大约 3.2%，时间却减少了 15%，MobileNet-v3 large 在 imagenet 分类任务上，较 MobileNet-v2，精度提高了大约 4.6%，时间减少了 5%，MobileNet-v3 large 与 v2 相比，在 COCO 上达到相同的精度，速度快了 25%，同时在分割算法上也有一定的提高。论文还有一个亮点在于，网络的设计利用了 NAS（network architecture search）算法以及 NetAdapt algorithm 算法。并且，论文还介绍了一些提升网络效果的 trick，这些 trick 也提升了不少的精度以及速度。
 
 <div align="center"><img src="https://1.bp.blogspot.com/-qMBHklyOfic/XcxKvHgiB8I/AAAAAAAAE8A/osT1RxwyqPY7bE_x7vsyYTYiIt7QSn0hQCEwYBhgL/s640/image1.png" /></div> 
