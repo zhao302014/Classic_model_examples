@@ -20,7 +20,7 @@ device = "cuda" if torch.cuda.is_available() else 'cpu'
 # 调用 net 里定义的模型，如果 GPU 可用则将模型转到 GPU
 model = MyUNet().to(device)
 # 加载 train.py 里训练好的模型
-model.load_state_dict(torch.load("./save_model/20model.pth"))
+model.load_state_dict(torch.load("./save_model/99model.pth"))
 
 # 进入验证阶段
 model.eval()
