@@ -87,7 +87,7 @@ def train(train_dataloader, modelGenerator, modelDiscriminator, loss, optimizerG
     print('生成器loss：', generator_loss.item())
 
 # 开始训练
-epoch = 50
+epoch = 100
 for t in range(epoch):
     lr_scheduler_Generator.step()
     lr_scheduler_Discriminator.step()
