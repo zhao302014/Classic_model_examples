@@ -33,7 +33,7 @@ device = "cuda" if torch.cuda.is_available() else 'cpu'
 # 调用 net 里定义的模型，如果 GPU 可用则将模型转到 GPU
 modelGenerator = MyGenerator().to(device)
 # 加载 train.py 里训练好的模型
-modelGenerator.load_state_dict(torch.load("./save_model/49model.pt"))    # 注：一般而言，50轮之后的模型才能生成较好“假”图
+modelGenerator.load_state_dict(torch.load("./save_model/99model.pt"))    # 注：一般而言，50轮之后的模型才能生成较好“假”图
 
 # 进入验证阶段
 modelGenerator.eval()
